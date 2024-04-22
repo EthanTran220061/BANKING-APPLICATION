@@ -32,5 +32,26 @@ namespace BANKING_APPLICATION
             this.balance = initBalance;
         
         }
+
+        /// <summary>
+        /// Read only property
+        /// </summary>
+        public double Balance
+        {
+            get { return balance; }
+        }
+
+        /// <summary>
+        /// Read only properly for account number
+        /// </summary>
+        public int AccountNumber
+        {
+            get { return accountNumber; }
+        
+        }
+
+        public abstract 
+
+            //17:21 video
     }
 }
