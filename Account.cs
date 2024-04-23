@@ -49,9 +49,28 @@ namespace BANKING_APPLICATION
             get { return accountNumber; }
         
         }
+        /// <summary>
+        /// Method to deposit an amount
+        /// </summary>
+        /// <param name="amount"></param>
+        /// <returns></returns>
+        public abstract bool Deposit(double amount);
 
-        public abstract 
+        /// <summary>
+        /// Method to withdraw funds
+        /// </summary>
+        /// <param name="amount"></param>
+        /// <returns></returns>
+        public abstract bool Withdraw(double amount);
 
-            //17:21 video
+        /// <summary>
+        /// Function to transfer funds
+        /// </summary>
+        
+        /// <param name="toAccount"></param>
+        /// <param name="amount"></param>
+        /// <returns></returns>
+        public abstract bool Transfer(Account toAccount, double amount);
+
     }
 }
