@@ -102,17 +102,58 @@ namespace BANKING_APPLICATION
             return false;
         }
 
+        /// <summary>
+        /// Transfer function
+        /// </summary>
+        /// <param name="fromAccountNumber"></param>
+        /// <param name="toAccountNumber"></param>
+        /// <param name="amount"></param>
+        /// <returns></returns>
         public bool Transfer(int fromAccountNumber, int toAccountNumber, double amount)
         { 
             Account fromAccount = GetAccount(fromAccountNumber);
             Account toAccount = GetAccount(toAccountNumber);
 
             if (fromAccount != null && toAccount != null)
-            { 
-            
+            {
+                return fromAccount.Transfer(toAccount, amount);
             
             }
             return false;
+        }
+
+        /// <summary>
+        /// Transfer funds
+        /// </summary>
+        /// <param name="accountNumber"></param>
+        /// <returns></returns>
+        public double ApplyInterest(int accountNumber)
+        {
+            Account account = GetAccount(accountNumber);
+
+            if (account is SavingsAccount) 
+            {
+                return ((SavingsAccount)account).ApplyInterest();
+
+            
+            }
+            return -1;
+        }
+
+        /// <summary>
+        /// List of account numbers
+        /// </summary>
+        /// <returns></returns>
+        public List<int> GetAccountNumbers()
+        { 
+            List<int> accountNumbers = new List<int>();
+
+            foreach (Account account in accounts)
+            {
+                accountNumbers.Add(account.AccountNumber);
+            }
+
+            return accountNumbers;
         }
     }
 }
