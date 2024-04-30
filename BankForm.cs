@@ -255,5 +255,10 @@ namespace BANKING_APPLICATION
         {
             Close();
         }
+
+        private void DarkMode_Click(object sender, EventArgs e)
+        {
+            this.BackColor = SystemColors.ControlDarkDark;
+        }
     }
 }//TRANSFER DOES NOT TRANSFER MONEY ONLY APPLIES TAX

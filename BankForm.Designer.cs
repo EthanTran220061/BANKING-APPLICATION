@@ -48,6 +48,7 @@
             label7 = new Label();
             radChecking = new RadioButton();
             radSavings = new RadioButton();
+            DarkMode = new Button();
             SuspendLayout();
             // 
             // btnCreate
@@ -238,11 +239,22 @@
             radSavings.Text = "Savings Account";
             radSavings.UseVisualStyleBackColor = true;
             // 
+            // DarkMode
+            // 
+            DarkMode.Location = new Point(804, 411);
+            DarkMode.Name = "DarkMode";
+            DarkMode.Size = new Size(161, 82);
+            DarkMode.TabIndex = 5;
+            DarkMode.Text = "Dark Mode";
+            DarkMode.UseVisualStyleBackColor = true;
+            DarkMode.Click += DarkMode_Click;
+            // 
             // BankForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1142, 666);
+            Controls.Add(DarkMode);
             Controls.Add(radSavings);
             Controls.Add(radChecking);
             Controls.Add(txtAccountTo);
@@ -292,5 +304,6 @@
         private Label label7;
         private RadioButton radChecking;
         private RadioButton radSavings;
+        private Button DarkMode;
     }
 }

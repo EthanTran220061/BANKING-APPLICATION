@@ -91,6 +91,7 @@ namespace BANKING_APPLICATION
             if(Withdraw(amount))
             {
                 toAccount.Deposit(amount);
+                Console.WriteLine(amount);
                 return true;
 
             }
