@@ -253,7 +253,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(64, 64, 64);
+            BackColor = SystemColors.ControlLight;
             ClientSize = new Size(1142, 666);
             Controls.Add(DarkMode);
             Controls.Add(radSavings);
