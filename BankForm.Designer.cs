@@ -145,7 +145,7 @@
             label4.AutoSize = true;
             label4.Location = new Point(327, 135);
             label4.Name = "label4";
-            label4.Size = new Size(124, 15);
+            label4.Size = new Size(125, 15);
             label4.TabIndex = 1;
             label4.Text = "Account Number (TO)";
             // 
@@ -212,7 +212,7 @@
             label7.AutoSize = true;
             label7.Location = new Point(138, 334);
             label7.Name = "label7";
-            label7.Size = new Size(116, 15);
+            label7.Size = new Size(117, 15);
             label7.TabIndex = 1;
             label7.Text = "Select Account Type:";
             label7.Click += label6_Click;
@@ -253,6 +253,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(64, 64, 64);
             ClientSize = new Size(1142, 666);
             Controls.Add(DarkMode);
             Controls.Add(radSavings);
@@ -275,6 +276,7 @@
             Controls.Add(btnTransfer);
             Controls.Add(btnDeposit);
             Controls.Add(btnCreate);
+            ForeColor = SystemColors.ControlText;
             Name = "BankForm";
             Text = "Bank application";
             Load += Form1_Load;
